@@ -24,9 +24,9 @@
         
         <a-ring id="cursorRing" 
           position="0 0 -1"
-          radius-inner= "0.02"
+          radius-inner= "0.03"
           radius-outer= "0.03"
-          src="#flower">
+          src="#ocean">
         </a-ring>
       </a-camera>
       
@@ -36,7 +36,7 @@
         width="3" 
         height="1" 
         depth="1" 
-        src="#wood"
+        src="#grass"
         shadow 
         animation__mouseenter="
           property: components.material.material.color; 
@@ -47,7 +47,7 @@
         animation__mouseleave="
           property: components.material.material.color; 
           type: color; 
-          to: #dda15e; 
+          to: #006d77; 
           startEvents: mouseleave; 
           dur: 500;">  
       </a-box>
@@ -58,29 +58,29 @@
         width="3" 
         height="1" 
         depth="1" 
-        src="#ocean"
+        src="flower; repeat: 10 10"
         shadow
         animation__mouseenter="
           property: components.material.material.color; 
           type: color; 
-          to: #3a0ca3; 
+          to: #ffb703; 
           startEvents: mouseenter; 
           dur: 500;"
         animation_mouseleave=" 
           property: components.material.material.color; 
           type: color; 
-          to: #8ecae6; 
+          to: #fb8500; 
           startEvents: mouseenter; 
           dur: 500;"
       </a-box>
       
       <a-plane id="ground"
         position="0 0 -4" 
-  //      rotation="-90 0 0" 
+        rotation="-90 0 0" 
         width="100" 
         height="100" 
-        color="#7BC8A4" 
-        material="src: #grass; repeat: 10 10"
+        color="#4895ef" 
+        material="src: #ocean; repeat: 10 10"
         shadow>
       </a-plane> 
     </a-scene>
