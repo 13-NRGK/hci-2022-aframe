@@ -13,7 +13,8 @@
           <img id="wood" src="images/wood.jpg" />
           <img id="wood2" src="images/wood2.jpg" />
           <img id="grass" src="images/grass.jpg" />
-        <img id="ocean" src="images/ocean.jpg" />
+          <img id="ocean" src="images/ocean.jpg" />
+          <img id="flower" src="images/flower.jpg" />
       </a-assets>
 
       <a-camera>
@@ -25,7 +26,7 @@
           position="0 0 -1"
           radius-inner= "0.02"
           radius-outer= "0.03"
-          src="#ocean">
+          src="#flower">
         </a-ring>
       </a-camera>
       
@@ -60,17 +61,17 @@
         src="#ocean"
         shadow
         animation__mouseenter="
-            attribute: scale;
-            startEvents: mouseenter;
-            easing: ease-out;
-            dur: 500; 
-            to: 1 1 1"
-        a-animation_mouseleave=" 
-            attribute: scale; 
-            startEvents: mouseleave; 
-            easing: ease-in;
-            dur: 500; 
-            to: 1 1 1";>
+          property: components.material.material.color; 
+          type: color; 
+          to: #3a0ca3; 
+          startEvents: mouseenter; 
+          dur: 500;"
+        animation_mouseleave=" 
+          property: components.material.material.color; 
+          type: color; 
+          to: transparent; 
+          startEvents: mouseenter; 
+          dur: 500;"
       </a-box>
       
       <a-plane id="ground"
