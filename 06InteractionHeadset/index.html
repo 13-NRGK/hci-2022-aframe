@@ -58,8 +58,12 @@
         depth="1" 
         src="#wood2"
         shadow>
-        <a-animation begin="click" attribute="rotation" to="0 360 0"
-                   easing="linear" dur="2000" fill="backwards">\
+        <a-animation_mouseleave=" 
+            property: scale; 
+            startEvents: mouseleave; 
+            easing: easeInCubic;
+            dur: 500; 
+            to: 1 1 1"
         </a-animation>
       </a-box>
       <a-plane id="ground"
